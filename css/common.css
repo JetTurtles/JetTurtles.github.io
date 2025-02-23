@@ -3,7 +3,7 @@ html, body {
     padding: 0;
 }
 body {
-    background-image: url("../images/turtle.png");
+    background-color: #0a80a2;
     background-attachment: fixed;
     background-size: cover;
 }

@@ -48,16 +48,22 @@
         height: 240px;
         box-sizing: border-box;
         margin: 10px 10px;
-        box-shadow: 0 0 10px white;
+        border-radius: 5px;
+        box-shadow: 0 0 2px white;
 
         display: flex;
         flex-direction: column;
+    }
+    .blog-item:hover {
+        box-shadow: 0 0 10px white;
     }
 
     .blog-item-content {
         width: 100%;
         height: 60px;
         margin-top: auto;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
         background-color: rgb(160, 160, 160);
     }
 </style>
