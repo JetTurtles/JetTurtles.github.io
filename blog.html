@@ -5,25 +5,42 @@
     <title>JetTurtles</title>
     <!--公共样式-->
     <link href="css/common.css" type="text/css" rel="stylesheet">
+    <link href="css/bulma.min.css" type="text/css" rel="stylesheet">
     <!--jQuery-->
     <script src="js/jquery.min.js"></script>
 </head>
 <body>
 <div id="top"></div>
+<section class="section">
+    <div class="container is-fullwidth" id="blogs">
+    </div>
+</section>
 <script type="text/javascript">
     $("#top").load("html/top.html")
 </script>
-<div id="blogs">
-</div>
 <script>
     $(document).ready(function () {
         $.getJSON("blog/blogs.json", blogs => {
             if (blogs) {
                 for (let blog of blogs) {
-                    const div = $(`<div class='blog-item' onclick="window.open('blog/${blog.path}')" style="background-image: url(${blog.img})"></div>`);
-                    const content = $(`<div class="blog-item-content"></div>`);
-                    content.append($(`<div>${blog.title}</div>`))
-                    div.append(content)
+                    const div = $(`
+<div class="card m-1">
+<a href="${blog.path}">
+   <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+        <figure class="image is-128x128">
+          <img src="${blog.img}" alt="Placeholder image"/>
+        </figure>
+      </div>
+      <div class="media-content">
+        <p class="title is-4">${blog.title}</p>
+      <time >${blog.date}</time>
+      </div>
+    </div>
+  </div>
+</a>
+</div>`);
                     $("#blogs").append(div)
                 }
             }
@@ -54,6 +71,7 @@
         display: flex;
         flex-direction: column;
     }
+
     .blog-item:hover {
         box-shadow: 0 0 10px white;
     }

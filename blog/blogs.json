@@ -2,6 +2,7 @@
   {
     "img": "images/turtle.png",
     "title": "测试",
-    "path": "test.html"
+    "path": "blog/test.html",
+    "date": "2025-03-05"
   }
 ]

@@ -1,76 +1,47 @@
-<div id="top">
-    <div id="content">
-        <div id="logo-box">
-            <a href="index.html">
-                <img src="../images/JetTurtles.png" alt="JetTurtles">
+<nav class="navbar is-success" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+            <img src="../images/JetTurtles.png" alt="JetTurtles">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+
+            <a class="navbar-item" href="blog.html">
+                博客
             </a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                    游戏
+                </a>
+                <div class="navbar-dropdown">
+                    <a class="navbar-item" href="../blog.html">
+                        喷气式海龟:海底世界
+                    </a>
+                </div>
+            </div>
         </div>
-        <div id="other-box">
-            <div>
-                <a href="blog.html" target="_blank">博客</a>
-            </div>
-            <div>
-                <a href="game.html" target="_blank">游戏</a>
-            </div>
-            <div>
-                <a href="https://github.com/JetTurtles" target="_blank">
-                    <img src="../images/github-mark-white.png">
-                </a>
-            </div>
-            <div>
-                <a href="https://gitee.com/JetTurtles" target="_blank">
-                    <img src="../images/gitee-logo.png">
-                </a>
+
+        <div class="navbar-end">
+            <div class="navbar-item">
+                <div class="buttons">
+                    <a href="https://github.com/JetTurtles" target="_blank">
+                        <img src="../images/github-mark-white.png">
+                    </a>
+                    <a href="https://gitee.com/JetTurtles" target="_blank">
+                        <img src="../images/gitee-logo.png">
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<style>
-    #top {
-        background-color: rgb(96, 96, 96, 45%);
-    }
-
-    #content {
-        padding: 0;
-        margin: auto;
-        width: 95%;
-        height: 40px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    #content a {
-        text-decoration: none;
-        color: white;
-    }
-
-    #logo-box {
-        padding: 0;
-        margin-top: auto;
-    }
-
-    #logo-box img {
-        width: 240px;
-        height: 35px;
-    }
-
-    #other-box {
-        padding: 0;
-        width: 300px;
-        height: 35px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    #other-box div {
-        margin: auto;
-        height: 30px;
-        color: white;
-        font-size: 25px;
-    }
-
-    #other-box img {
-        width: 30px;
-        height: 30px;
-    }
-</style>
+</nav>
