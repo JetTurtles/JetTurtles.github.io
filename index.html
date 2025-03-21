@@ -12,7 +12,7 @@
 <body>
 <div id="top"></div>
 <!-- 英雄区 -->
-<section class="hero is-success">
+<section class="hero">
     <div class="hero-body">
         <div class="container">
             <h1 class="title">
@@ -28,56 +28,53 @@
 <!-- 内容区 -->
 <section class="section">
     <div class="container">
-        <div class="columns">
-            <div class="column">
+        <div class="columns is-multiline">
+            <div class="column is-one-third" onclick="openPage('typescript-basic')">
                 <div class="card">
                     <div class="card-image">
                         <figure class="image is-4by3">
-                            <img src="images/csharp.png" alt="C#">
+                            <img src="images/typescript.png" alt="TypeScript" loading="lazy">
                         </figure>
                     </div>
                     <div class="card-content">
                         <div class="media">
                             <div class="media-content">
-                                <p class="title is-4">C# 基础</p>
+                                <p class="title is-4">TypeScript 基础</p>
                             </div>
                         </div>
 
                         <div class="content">
-                            C# 是一种现代、通用的编程语言。在游戏开发中，借助强大的 .NET 类库，能快速实现复杂逻辑。
-                            掌握 C# 基础是踏入 Godot 游戏开发及其他编程领域的关键一步 。
-                            <a href="blog/csharp-basic.html">阅读更多</a>
+                            TypeScript 是一种由微软开发的自由和开源的编程语言。它是 JavaScript
+                            的一个严格超集，并添加了可选的静态类型和基于类的面向对象编程。
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="column">
+            <div class="column is-one-third" onclick="openPage('cocos-basic')">
                 <div class="card">
                     <div class="card-image">
                         <figure class="image is-4by3">
-                            <img src="images/godot.png" alt="Godot">
+                            <img src="images/cocos.png" alt="Cocos" loading="lazy">
                         </figure>
                     </div>
                     <div class="card-content">
                         <div class="media">
                             <div class="media-content">
-                                <p class="title is-4">Godot 基础</p>
+                                <p class="title is-4">Cocos Creator 基础</p>
                             </div>
                         </div>
-
                         <div class="content">
-                            Godot 是一款开源且功能强大的游戏引擎，能让开发者轻松创建 2D 或 3D 游戏原型，快速实现基础功能。
-                            良好的 Godot 基础是开启游戏开发之旅的必备基石。
-                            <a href="blog/godot-basic.html">阅读更多</a>
+                            Cocos Creator 既是一款高效、轻量开源的跨平台图形引擎，也是一个实时 3D 内容创作平台。
+                            Cocos Creator 能完美胜任 2D、3D 的游戏开发工作。
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="column">
+            <div class="column is-one-third" onclick="openPage('blender-basic')">
                 <div class="card">
                     <div class="card-image">
                         <figure class="image is-4by3">
-                            <img src="images/blender.png" alt="blender">
+                            <img src="images/blender.png" alt="blender" loading="lazy">
                         </figure>
                     </div>
                     <div class="card-content">
@@ -88,8 +85,8 @@
                         </div>
 
                         <div class="content">
-                            Blender 是一款免费开源的 3D 创作套件。掌握 Blender 基础，可帮助开发者为游戏打造精美的 3D 模型、场景，提升游戏视觉效果，是游戏美术资源制作的重要技能 。
-                            <a href="blog/blender-basic.html">阅读更多</a>
+                            Blender 是一款免费开源的 3D 创作套件。掌握 Blender 基础，可帮助开发者为游戏打造精美的 3D
+                            模型、场景，提升游戏视觉效果，是游戏美术资源制作的重要技能 。
                         </div>
                     </div>
                 </div>
@@ -99,7 +96,7 @@
 </section>
 
 <!-- 页脚 -->
-<footer class="footer" style="background-color: #d6d9e0">
+<footer class="footer is-success" style="background-color:var(--bulma-primary)">
     <div class="content has-text-centered">
         <button>
             <a href="https://github.com/JetTurtles" target="_blank">
@@ -118,7 +115,12 @@
     </div>
 </footer>
 <script type="text/javascript">
-    $("#top").load("html/top.html")
+    $("#top").load("top.html")
+
+    function openPage(name) {
+        const url = "blog-detail.html?name=" + name;
+        window.open(url, "_blank");
+    }
 </script>
 </body>
 </html>
