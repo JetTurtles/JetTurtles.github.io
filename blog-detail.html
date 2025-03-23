@@ -17,6 +17,12 @@
     <div class="content" id="blog-detail">
 
     </div>
+    <!-- 添加一个容器来展示大纲 -->
+    <div class="content" id="table-of-contents"
+         style="position: fixed; top: 10px; right: 10px; width: 200px; background: white; padding: 10px; border: 1px solid #ddd;">
+        <ul id="toc-list">
+        </ul>
+    </div>
 </section>
 
 <script type="text/javascript">
@@ -46,10 +52,40 @@
                 if (firstLine.startsWith('# ')) {
                     document.title = firstLine.substring(2); // 去掉 '# ' 前缀
                 }
-                console.log( marked.parse(text))
-                document.getElementById('blog-detail').innerHTML = marked.parse(text);
+                let html = marked.parse(text);
+                // 生成大纲
+                html = generateTableOfContents(html);
+                document.getElementById('blog-detail').innerHTML = html;
             })
             .catch(error => console.error('Error loading Markdown file:', error));
+    }
+
+    // 生成大纲的函数
+    function generateTableOfContents(html) {
+        // 解析HTML字符串为DOM对象
+        let dom = new DOMParser();
+        let doc = dom.parseFromString(html, 'text/html');
+        // 获取所有h2到h6标签
+        let headings = doc.querySelectorAll('h2,h3,h4,h5,h6')
+        // 遍历每个标题标签，生成大纲
+        let tocList = document.getElementById('toc-list');
+        for (let i = 0; i < headings.length; i++) {
+            let heading = headings[i];
+            // 为每个标题添加一个唯一的ID
+            heading.id = Math.random().toString(36)
+            let level = heading.tagName.charAt(1);
+            let text = heading.textContent;
+            // 创建一个链接
+            let link = document.createElement('a');
+            link.style.color = 'black';
+            link.href = '#' + heading.id;
+            link.textContent = text;
+            let listItem = document.createElement('li');
+            listItem.style.marginLeft = (level - 2) * 10 + 'px';
+            listItem.appendChild(link);
+            tocList.appendChild(listItem);
+        }
+        return doc.body.innerHTML;
     }
 </script>
 </body>
