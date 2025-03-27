@@ -1,6 +1,5 @@
 ---
 icon: circle-info
-cover: /assets/images/JetTurtles.png
 article: false
 ---
 
