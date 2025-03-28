@@ -43,7 +43,7 @@ jobs:
       - name: 部署文档
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          # 部署文档
+          # 部署分支
           branch: gh-pages
           folder: src/.vuepress/dist
         env:
