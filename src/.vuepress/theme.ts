@@ -15,6 +15,8 @@ export default hopeTheme({
 
     docsDir: "src",
 
+    logo: "/assets/images/JetTurtles.png",
+
     // 导航栏
     navbar,
 
@@ -25,6 +27,8 @@ export default hopeTheme({
 
     // 博客相关
     blog: {
+        name: "Aji",
+        avatar: "/assets/images/author.png",
         description: "一位Java开发者和游戏爱好者",
         intro: "/intro.html",
         medias: {
