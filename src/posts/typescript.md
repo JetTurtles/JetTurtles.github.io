@@ -1,16 +1,16 @@
 ---
-cover: /assets/images/typescript.png
 icon: laptop-code
 date: 2025-03-28
 category:
   - 游戏开发
 tag:
   - typescript
-star: true
-sticky: true
+sticky: false
 ---
 
 # TypeScript 基础
+
+TypeScript 是一种由微软开发的自由和开源的编程语言。它是 JavaScript 的一个严格超集，并添加了可选的静态类型和基于类的面向对象编程。
 
 ## 基础类型
 
@@ -572,17 +572,17 @@ namespace namespaceName {
 
 ```typescript
 namespace MyNamespace {
-  export class MyClass {
-    constructor() {
-      console.log('Hello World!');
+    export class MyClass {
+        constructor() {
+            console.log('Hello World!');
+        }
     }
-  }
 }
 
 class MyClass {
-  constructor() {
-    console.log('Hello World!');
-  }
+    constructor() {
+        console.log('Hello World!');
+    }
 }
 
 let myClass: MyClass = new MyClass();

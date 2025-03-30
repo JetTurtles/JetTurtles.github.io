@@ -17,5 +17,5 @@ projects:
   - icon: gamepad
     name: 游戏
     desc: 游戏
-    link: /games/mygame.html
+    link: https://jetturtles.github.io/games/mygame.html
 ---
