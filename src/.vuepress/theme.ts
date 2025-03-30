@@ -70,6 +70,8 @@ export default hopeTheme({
         tabs: true,
         tasklist: true,
         vPre: true,
+        // 启用流程图
+        flowchart: true,
     },
 
     // 在这里配置主题提供的插件
