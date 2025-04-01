@@ -4,8 +4,7 @@ date: 2025-03-31
 index: true
 icon: list
 article: true
-category:
-  - 游戏开发
+category: 游戏开发
 star: true
 sticky: true
 ---
