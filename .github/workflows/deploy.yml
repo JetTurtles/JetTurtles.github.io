@@ -48,6 +48,8 @@ jobs:
   # 部署工作
   deploy:
     permissions:
+      contents: read
+      pages: write
       id-token: write
     environment:
       name: github-pages
