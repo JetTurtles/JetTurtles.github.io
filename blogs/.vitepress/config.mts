@@ -8,7 +8,7 @@ export default defineConfig({
         siteTitle: 'JetTurtles',
         nav: [
             {
-                text: 'Home',
+                text: '首页',
                 link: '/'
             },
             {
