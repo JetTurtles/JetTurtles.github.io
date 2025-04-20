@@ -6,6 +6,6 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "docs:deploy": "npm run docs:build && git checkout gh-pages && cp -r docs/.vitepress/dist/* docs && git add . && git commit -m 'Deploy to GitHub Pages' && git push origin gh-pages && git checkout -"
+    "docs:deploy": "npm run docs:build && git checkout gh-pages && cp -r docs/.vitepress/dist/* docs && git add . && git commit -m \"Deploy to GitHub Pages\" && git push origin gh-pages && git checkout -"
   }
 }
