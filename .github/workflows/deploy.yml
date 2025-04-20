@@ -1,0 +1,54 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 检出当前的 GitHub 仓库
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 设置 Node.js 22 环境
+      - name: Setup Node22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # 设置 Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      # 安装项目依赖
+      - name: Install dependencies
+        run: |
+          npm install
+
+      # 构建 VitePress 项目
+      - name: Build VitePress
+        run: |
+          npm run docs:build  # 如果你定义了其它构建命令，请修改这里的命令
+
+      # 构建并上传静态文件
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/.vitepress/dist
+  # 部署工作
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    name: Deploy
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

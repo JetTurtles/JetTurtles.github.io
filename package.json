@@ -3,9 +3,8 @@
     "vitepress": "^1.6.3"
   },
   "scripts": {
-    "blogs:dev": "vitepress dev blogs",
-    "blogs:build": "vitepress build blogs",
-    "blogs:preview": "vitepress preview blogs",
-    "blogs:deploy": "npm run blogs:build && git checkout gh-pages &&rm -rf docs && mkdir docs && cp -r blogs/.vitepress/dist/* docs && git add . && git commit -m \"Deploy to GitHub Pages\" && git push origin gh-pages && git checkout -"
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   }
 }
