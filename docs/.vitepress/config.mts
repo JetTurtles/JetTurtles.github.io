@@ -33,15 +33,6 @@ export default defineConfig({
                         link: '/game/gdscript'
                     }
                 ]
-            },
-            {
-                text: '后端',
-                items: [
-                    {
-                        text: 'Linux基础',
-                        link: '/backend/linux'
-                    }
-                ]
             }
         ],
 

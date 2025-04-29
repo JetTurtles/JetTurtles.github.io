@@ -1,4 +1,16 @@
 :root {
-    --vp-c-brand-1: #646cff;
-    --vp-c-brand-2: #747bff;
+    --bg-color: #FF8264;
+    --text-color: #000000;
+    --home-after-bg: rgba(255, 255, 255, 0.6);
+    --profile-card-bg: #FF9900;
+    --game-bg: var(--profile-card-bg);
+}
+
+.dark {
+    --bg-color: #455D7A;
+    --text-color: #ffffff;
+    --home-after-bg: rgba(0, 0, 0, 0.6);
+    --profile-card-bg: #2d4059;
+    --game-bg: var(--profile-card-bg);
+
 }

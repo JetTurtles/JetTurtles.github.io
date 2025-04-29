@@ -4,11 +4,11 @@ import DefaultTheme from 'vitepress/theme'
 import './custom.css'
 
 //引入自定义组件
-import HomeGames from '../../components/HomeGames.vue'
+import Home from '../../components/Home.vue'
 
 export default {
     extends: DefaultTheme,
     enhanceApp: ({app}) => {
-        app.component('HomeGames', HomeGames);
+        app.component('Home', Home);
     }
 }
