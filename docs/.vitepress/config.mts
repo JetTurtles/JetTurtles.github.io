@@ -52,7 +52,11 @@ export default defineConfig({
                     {
                         text: 'Linux基础',
                         link: '/backend/linux'
-                    }
+                    },
+                    {
+                        text: 'Shell基础',
+                        link: '/backend/shell'
+                    },
                 ]
             }
         ],
