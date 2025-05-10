@@ -31,6 +31,10 @@ export default defineConfig({
                     {
                         text: 'GDScript基础',
                         link: '/game/gdscript'
+                    },
+                    {
+                        text: 'Spine入门',
+                        link: '/game/spine'
                     }
                 ]
             }
@@ -43,6 +47,10 @@ export default defineConfig({
                     {
                         text: 'GDScript基础',
                         link: '/game/gdscript'
+                    },
+                    {
+                        text: 'Spine入门',
+                        link: '/game/spine'
                     }
                 ]
             },
