@@ -29,11 +29,11 @@ export default defineConfig({
                 text: '游戏',
                 items: [
                     {
-                        text: 'GDScript基础',
+                        text: 'GDScript 基础',
                         link: '/game/gdscript'
                     },
                     {
-                        text: 'Spine入门',
+                        text: 'Spine 入门',
                         link: '/game/spine'
                     }
                 ]
@@ -45,11 +45,11 @@ export default defineConfig({
                 text: '游戏',
                 items: [
                     {
-                        text: 'GDScript基础',
+                        text: 'GDScript 基础',
                         link: '/game/gdscript'
                     },
                     {
-                        text: 'Spine入门',
+                        text: 'Spine 入门',
                         link: '/game/spine'
                     }
                 ]
@@ -58,11 +58,11 @@ export default defineConfig({
                 text: '后端',
                 items: [
                     {
-                        text: 'Linux基础',
+                        text: 'Linux 基础',
                         link: '/backend/linux'
                     },
                     {
-                        text: 'Shell基础',
+                        text: 'Shell 基础',
                         link: '/backend/shell'
                     },
                 ]
