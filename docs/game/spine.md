@@ -36,3 +36,56 @@ Spine 是一款针对游戏开发的 2D **骨骼动画**编辑工具。
 
 ![image-20250510230753128](/images/spine-rotate.png)
 
+## 画出骨骼
+
+点击创建按钮，选择根骨骼，按住左键拖动鼠标画出骨骼
+
+![image-20250513174924617](/images/spine-create-bones.png)
+
+## 设置父骨骼（图片绑定骨骼）
+
+1. 选择需要设置父骨骼的图片
+2. 点击设置父骨骼按钮
+3. 点击图片对应的骨骼
+4. 弹窗选择默认选项并点击确认
+
+![image-20250513202354863](/images/spine-setup-bones.png)
+
+移动骨骼图片也跟着移动
+
+![image-20250513203102482](/images/spine-picture-mv-with-bone.png)
+
+## 动画
+
+选择左上角的**设置/动画**按钮进入对应的页面
+
+### 创建
+
+![image-20250513204153168](/images/spine-create-animation.png)
+
+### 动图
+
+#### 移动图片
+
+往上移动
+
+![image-20250513212634725](/images/spine-mv-picture-up.png)
+
+往下移动（步骤与往上移动类似）
+
+#### 移动脑袋
+
+添加初始和终止位置属性
+
+![image-20250513213116193](/images/spine-setup-head-value.png)
+
+往上移动
+
+![image-20250513213504142](/images/spine-setup-head-value-rotate.png)
+
+往下移动（步骤与往上移动类似）
+
+### 最终成品
+
+![turtle](/images/turtle.gif)
+
